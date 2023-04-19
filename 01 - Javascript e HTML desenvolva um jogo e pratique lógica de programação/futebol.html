@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso 01</title>
+</head>
+
+<body>
+    <h1>Hello people</h1>
+    <script>
+        function pulaLinha() {
+            document.write('<br>');
+            document.write('<br>');
+
+        }
+
+        function mostraFrase(frase) {
+            document.write(`<h2>${frase}</h2>`);
+            document.write('<br>');
+
+        }
+
+        var vitorias = parseInt(prompt("Entre com o número de vitórias"));
+        var empates = parseInt(prompt("Entre com o número de empates"));
+
+        function calculaPontos(vitorias, empates) {
+            pontos = 0;
+            pontos += (vitorias * 3) + empates;
+            return pontos;
+        }
+        totalPontos = calculaPontos(vitorias, empates)
+        mostraFrase(totalPontos)
+
+        var pontosAnoPassado = 28;
+
+        if (totalPontos > pontosAnoPassado) {
+            mostraFrase("Seu time foi melhor do que no ano passado.");
+        } else if (totalPontos == pontosAnoPassado) {
+            mostraFrase("Seu time fez a mesma quantidade de pontos do ano passado.")
+        } else if (totalPontos < pontosAnoPassado) {
+            mostraFrase("Seu time foi pior do que o ano passado.")
+        }
+    </script>
+</body>
+
+</html>

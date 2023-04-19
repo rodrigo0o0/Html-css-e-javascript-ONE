@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+<canvas width="500" height="400"></canvas>
+
+<script>
+
+    function reta(inicioX, inicioY, finalX, finalY, cor) {
+        pincel.fillStyle = cor;
+        pincel.fillRect(inicioX, inicioY, finalX, finalY);
+    }
+
+
+    var canvas = document.querySelector("canvas");
+    var pincel = canvas.getContext('2d');
+
+
+
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0, 0, 500, 400);
+
+    reta(80, 80, 120, 120, 'black');
+    reta(300, 80, 120, 120, 'black');
+    reta(200, 200, 100, 70, 'black');
+    reta(150, 250, 200, 70, 'black');
+    reta(150, 320, 50, 100, 'black');
+    reta(300, 320, 50, 100, 'black');
+
+
+
+    canvas.addEventListener("click", function (event) {
+        var x = event.clientX;
+        var y = event.clientY;
+
+        console.log("Posição x: " + x + ", posição y: " + y);
+
+
+    });
+
+</script>

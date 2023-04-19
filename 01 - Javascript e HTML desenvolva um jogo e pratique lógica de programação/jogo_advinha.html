@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso 01</title>
+</head>
+
+<body>
+    <h1>Hello people</h1>
+    <script>
+        function pulaLinha() {
+            document.write('<br>');
+            document.write('<br>');
+
+        }
+
+        function mostraFrase(frase) {
+            document.write(`<h2>${frase}</h2>`);
+            document.write('<br>');
+
+        }
+
+        var numeroSecreto = Math.round((Math.random() * 10));
+
+        console.log(numeroSecreto);
+
+        var chute = 0
+        while (chute != numeroSecreto) {
+            chute = parseInt(prompt("Digite o seu chute : "))
+
+
+        }
+        if (chute == numeroSecreto) {
+            mostraFrase(`Você acertou!!!! O número era ${numeroSecreto}`)
+        }
+
+
+    </script>
+</body>
+
+</html>
